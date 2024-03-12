@@ -51,6 +51,7 @@ const Draggable: React.FunctionComponent<Props> = (props) => {
     isEnabled,
     shouldRespectForcePress,
     canDragInteractiveElements,
+    allowKeyModifiers,
     isClone,
 
     // mapProps
@@ -78,6 +79,7 @@ const Draggable: React.FunctionComponent<Props> = (props) => {
         registry,
         getDraggableRef: getRef,
         canDragInteractiveElements,
+        allowKeyModifiers,
         shouldRespectForcePress,
         isEnabled,
       }),
@@ -86,6 +88,7 @@ const Draggable: React.FunctionComponent<Props> = (props) => {
         registry,
         getRef,
         canDragInteractiveElements,
+        allowKeyModifiers,
         shouldRespectForcePress,
         isEnabled,
       ],

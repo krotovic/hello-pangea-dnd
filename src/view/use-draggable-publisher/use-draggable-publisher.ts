@@ -32,6 +32,7 @@ export default function useDraggablePublisher(args: Args) {
     canDragInteractiveElements,
     shouldRespectForcePress,
     isEnabled,
+    allowKeyModifiers,
   } = args;
 
   const options: DraggableOptions = useMemo(
@@ -39,8 +40,14 @@ export default function useDraggablePublisher(args: Args) {
       canDragInteractiveElements,
       shouldRespectForcePress,
       isEnabled,
+      allowKeyModifiers,
     }),
-    [canDragInteractiveElements, isEnabled, shouldRespectForcePress],
+    [
+      canDragInteractiveElements,
+      isEnabled,
+      shouldRespectForcePress,
+      allowKeyModifiers,
+    ],
   );
 
   const getDimension = useCallback(

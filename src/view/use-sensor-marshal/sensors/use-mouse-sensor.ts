@@ -225,15 +225,23 @@ export default function useMouseSensor(api: SensorAPI) {
           return;
         }
 
-        // Do not start a drag if any modifier key is pressed
-        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) {
-          return;
-        }
-
         const draggableId: DraggableId | null =
           api.findClosestDraggableId(event);
 
         if (!draggableId) {
+          return;
+        }
+
+        const options: DraggableOptions | null =
+          api.findOptionsForDraggable(draggableId);
+
+        const allowKeyModifiers: boolean = options?.allowKeyModifiers ?? false;
+
+        // Do not start a drag if any modifier key is pressed
+        if (
+          !allowKeyModifiers &&
+          (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
+        ) {
           return;
         }
 

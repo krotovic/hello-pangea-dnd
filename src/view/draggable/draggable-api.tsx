@@ -31,6 +31,7 @@ export function PublicDraggable(props: DraggableProps) {
     props.disableInteractiveElementBlocking,
   );
   const shouldRespectForcePress = Boolean(props.shouldRespectForcePress);
+  const allowKeyModifiers = Boolean(props.allowKeyModifiers);
 
   return (
     <PrivateDraggable
@@ -39,6 +40,7 @@ export function PublicDraggable(props: DraggableProps) {
       isEnabled={isEnabled}
       canDragInteractiveElements={canDragInteractiveElements}
       shouldRespectForcePress={shouldRespectForcePress}
+      allowKeyModifiers={allowKeyModifiers}
     />
   );
 }

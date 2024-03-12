@@ -29,6 +29,7 @@ export interface DraggableOptions {
   canDragInteractiveElements: boolean;
   shouldRespectForcePress: boolean;
   isEnabled: boolean;
+  allowKeyModifiers: boolean;
 }
 
 export type Direction = 'horizontal' | 'vertical';

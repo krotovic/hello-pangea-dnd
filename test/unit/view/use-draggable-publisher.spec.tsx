@@ -37,6 +37,7 @@ const defaultOptions: DraggableOptions = {
   canDragInteractiveElements: false,
   shouldRespectForcePress: false,
   isEnabled: true,
+  allowKeyModifiers: false,
 };
 
 function Item(props: ItemProps) {

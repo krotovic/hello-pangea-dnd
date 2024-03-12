@@ -26,6 +26,7 @@ const defaultOptions: DraggableOptions = {
   canDragInteractiveElements: true,
   shouldRespectForcePress: false,
   isEnabled: true,
+  allowKeyModifiers: false,
 };
 
 const getUniqueId = (() => {
